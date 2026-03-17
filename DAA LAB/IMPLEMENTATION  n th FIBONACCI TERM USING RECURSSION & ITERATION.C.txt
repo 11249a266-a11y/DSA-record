@@ -1,0 +1,24 @@
+PROGRAM :
+#include <stdio.h>
+int fib(int n)
+{
+//default conditions
+if(n==0)
+return 0;
+if(n==1)
+return 1;
+//to print the nth fibonacci term
+return fib(n-1)+fib(n-2);
+}
+int main()
+{
+int n;
+printf("enter number: ");
+scanf("%d",&n);
+if (n < 0) {
+printf("invalid");
+}
+fib(n);
+printf("fibonacci term is: %d", fib(n));
+return 0;
+}
